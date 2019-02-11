@@ -1,8 +1,18 @@
 <template>
     <div>
-        <img :src="project.image"><br>
-            {{ project.title}}<br><br>
-        {{ project.info}}
+        <div class="page-headline">Project Overview</div>
+
+        <div class="project columns">
+            <div class="project__visual column">
+                <img :src="project.image">
+            </div>
+            <div class="project__written column">
+                {{ project.title}}<br><br>
+                {{ project.info}}
+            </div>
+        </div>
+        <br>
+
     </div>
 </template>
 
@@ -23,3 +33,6 @@ export default {
     }
 }
 </script>
+<style>
+
+</style>

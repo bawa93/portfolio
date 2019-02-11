@@ -1,9 +1,17 @@
 <template>
     <div>
-        zcvzdfgsd
-        <ul>
+        <div class="page-headline">My Projects</div>
+
+        <div class="skills">
+            <div v-for="skill in skills" class="skills__item">
+                PHP
+            </div>
+        </div>
+        <div class="projects">
+
             <projects_item v-for="(project,index) in projects" :key="index" :project="project"></projects_item>
-        </ul>
+        </div>
+
     </div>
 </template>
 <script>
@@ -12,7 +20,10 @@ export default {
     components: { projects_item: Projects_item},
     data(){
         return {
-            projects: []
+            projects: [],
+            skills: [
+                'PHP', 'JS', 'Laravel'
+            ]
         }
     },
     mounted() {
@@ -24,3 +35,48 @@ export default {
 
 }
 </script>
+<style lang="scss">
+    .page-headline {
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        /*border-bottom: 1px solid #ffffff;*/
+    }
+    .page-headline:after {
+        content: ""; /* This is necessary for the pseudo element to work. */
+        display: block; /* This will put the pseudo element on its own line. */
+        margin: 0 auto; /* This will center the border. */
+        width: 50%; /* Change this to whatever width you want. */
+        padding-top: 20px; /* This creates some space between the element and the border. */
+        border-bottom: 1px solid #ffffff; /* This creates the border. Replace black with whatever color you want. */
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+        justify-content: center;
+    }
+    .skills__item {
+        color: #ffffff;
+        text-align: center;
+        width: 120px;
+        height: 45px;
+        line-height: 45px;
+        text-transform: uppercase;
+        background-color: green;
+        margin: 10px;
+    ;
+    }
+    .projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+</style>
