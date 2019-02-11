@@ -2,5 +2,5 @@
 
 
 @section('content')
-    <Projects></Projects>
+    <router-view></router-view>
 @endsection

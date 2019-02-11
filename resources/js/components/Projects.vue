@@ -3,8 +3,6 @@
         zcvzdfgsd
         <ul>
             <projects_item v-for="(project,index) in projects" :key="index" :project="project"></projects_item>
-
-
         </ul>
     </div>
 </template>

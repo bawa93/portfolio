@@ -2,7 +2,8 @@
     <div>
         <ul>
                 <img :src="project.image"><br>
-                {{ project.title }}<br>
+            <router-link :to="{ name: 'project', params: { id: project.id }}">{{ project.title }}</router-link>
+            <br>
         </ul>
     </div>
 </template>
