@@ -2,11 +2,12 @@
     <div>
         <div class="projects__item">
                 <img :src="project.image" class="projects__item-image"><br>
-            <router-link :to="{ name: 'project', params: { id: project.id }}">{{ project.title }}</router-link>
-            <div class="projects__item-skills"><strong class="has-text-white">Skills:</strong>
+            <div class="projects__item-skills">
                 <span class="project-skills__item" v-for="skill in projectSkills">{{skill}}</span>
             </div>
-                <br>
+            <router-link :to="{ name: 'project', params: { id: project.id }}">{{ project.title | uppercase }}</router-link>
+
+            <br>
         </div>
     </div>
 </template>
@@ -31,7 +32,7 @@ export default {
 
 <style lang="scss">
     .projects__item {
-        color: #ffffff;
+        color: #000;
         text-align: center;
         /*background-color: green;*/
         margin: 10px;
@@ -40,10 +41,11 @@ export default {
     .projects__item-image {
         max-width: 400px;
 
-        padding: 15px;
-        border: 1px solid #fff;
+        padding: 8px;
+        /*border: 1px solid #000;*/
     }
     .project-skills__item {
         text-transform: uppercase;
+        font-size:11px;
     }
 </style>

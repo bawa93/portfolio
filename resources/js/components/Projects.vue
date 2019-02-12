@@ -1,10 +1,9 @@
 <template>
     <div>
-        <div class="page-headline">My Projects</div>
 
         <div class="skills">
             <div v-for="skill in skills" class="skills__item">
-                {{ skill}}
+                <a href="#"> {{ skill}}</a>
             </div>
         </div>
         <div class="projects">
@@ -22,7 +21,7 @@ export default {
         return {
             projects: [],
             skills: [
-                'PHP', 'JS', 'Laravel'
+                'All', 'PHP', 'JS', 'Laravel'
             ]
         }
     },
@@ -59,18 +58,18 @@ export default {
         flex-wrap: wrap-reverse;
         text-align: center;
         justify-content: center;
+        &__item {
+            color: #000;
+            text-align: center;
+            width: 120px;
+            height: 45px;
+            line-height: 45px;
+            text-transform: uppercase;
+            /*background-color: green;*/
+            margin: 10px;
+        }
     }
-    .skills__item {
-        color: #ffffff;
-        text-align: center;
-        width: 120px;
-        height: 45px;
-        line-height: 45px;
-        text-transform: uppercase;
-        background-color: green;
-        margin: 10px;
-    ;
-    }
+
     .projects {
         display: flex;
         flex-direction: row;

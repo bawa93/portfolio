@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/home', function () {
-    return view('index');
-});
+// Route::get('/home', function () {
+//     return view('index');
+// });
 
 Route::get('/vue/{vue_capture?}', function () {
     return view('vue.index');
