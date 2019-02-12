@@ -3,7 +3,7 @@
         <div class="projects__item">
                 <img :src="project.image" alt="Project Image" class="projects__item-image"><br>
             <div class="projects__item-skills">
-                <span class="project-skills__item" v-for="skill in projectSkills">{{skill}}, </span>
+                <span class="project-skills__item button is-primary is-small " v-for="skill in projectSkills">{{skill}}</span>
             </div>
             <router-link :to="{ name: 'project', params: { id: project.id }}">{{ project.title | uppercase }}</router-link>
 
@@ -47,5 +47,6 @@ export default {
     .project-skills__item {
         text-transform: uppercase;
         font-size:11px;
+        margin: 0 5px;
     }
 </style>

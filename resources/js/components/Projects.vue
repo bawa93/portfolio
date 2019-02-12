@@ -37,7 +37,7 @@ export default {
 </script>
 <style lang="scss">
     .page-headline {
-        color: #ffffff;
+        color: #000;
         font-size: 25px;
         font-weight: bold;
         text-align: center;
@@ -50,7 +50,7 @@ export default {
         margin: 0 auto; /* This will center the border. */
         width: 50%; /* Change this to whatever width you want. */
         padding-top: 20px; /* This creates some space between the element and the border. */
-        border-bottom: 1px solid #ffffff; /* This creates the border. Replace black with whatever color you want. */
+        border-bottom: 1px solid #000; /* This creates the border. Replace black with whatever color you want. */
     }
 
     .skills {

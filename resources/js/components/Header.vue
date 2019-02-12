@@ -1,86 +1,68 @@
 <template>
     <div>
-
-        <section>
+        <header class="container-fluid">
             <h2 class="hidden">
-                Who am I?
+                Main Menu
             </h2>
+            <nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="margin-bottom: 30px;">
+                <h2 class="hidden">Main Navigation</h2>
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#">LakhveerBawa.Com
+                    </a>
 
-        <div class="columns">
-            <div class="hero__intro column has-text-black" >
-                <span class="hero__intro--hello">
-
-                    Hello
-
-                </span>
-                <div class="hero__intro--who" >
-                    I'M
+                    <a role="button" class="navbar-burger burger" @click="toggleMenu" v-bind:class="{ 'is-active': MenuStatus }" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
                 </div>
-                <div class="hero__intro--fname">
-                    Lakhveer
-                </div>
-                <div  class="hero__intro--nlame">
-                    Bawa
-                </div>
-                <div>Full Stack Web Developer</div>
-            </div>
 
-            <div class="hero__image column">
-                <img src="/hero.png" alt="Lakhveer Bawa Image" class="hero__img" >
-            </div>
-        </div>
-        </section>
+                <div id="navbarBasicExample" class="navbar-menu" v-bind:class="{ 'is-active': MenuStatus }">
+
+                    <div class="navbar-end">
+                        <a class="navbar-item">
+                            Home
+                        </a>
+
+                        <a class="navbar-item" href="#myprojects">
+                            Projects
+                        </a>
+
+                        <a class="navbar-item" href="#skills">
+                            Skills
+                        </a>
+
+                        <a class="navbar-item" href="#contactme">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
     </div>
 </template>
 
 <script>
 export default  {
-
+    data() {
+        return {
+            MenuStatus: false
+        }
+    },
+methods: {
+    toggleMenu() {
+        this.MenuStatus = !this.MenuStatus;
+    }
 }
+}
+
 </script>
 
 <style>
-    .columns {
-    }
-
-    .hero__intro.column.has-text-black {
-        text-align: right;
-        padding-right: 45px;
-        text-transform: uppercase;
-    }
-
-    .hero__intro--hello {
-        font-size: 24px;
-        border-bottom: 1px solid #202020;
-    }
-
-    .hero__intro--who {
-        font-size: 38px;
-        letter-spacing: 4px;
-    }
-
-    .hero__intro--fname {
-        font-size: 38px;
-        font-weight: bold;
-        letter-spacing: 4px;
-    }
-
-    .hero__intro--nlame {
-        font-size: 38px;
-        font-weight: bold;
-        letter-spacing: 4px;
-    }
-
-    .hero__image.column {
-        min-height: 422px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .hero__img {
-        max-width: 300px;
-        position: absolute;
-        top: 1%;
-        z-index: 9999;
-    }
+.navbar-brand a {
+    font-weight: bold;
+}
 </style>

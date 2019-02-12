@@ -1859,7 +1859,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      MenuStatus: false
+    };
+  },
+  methods: {
+    toggleMenu: function toggleMenu() {
+      this.MenuStatus = !this.MenuStatus;
+    }
+  }
+});
 
 /***/ }),
 
@@ -1876,6 +1899,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Projects */ "./resources/js/components/Projects.vue");
 /* harmony import */ var _Featured_Technologies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Featured_Technologies */ "./resources/js/components/Featured_Technologies.vue");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2023,6 +2075,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Header */ "./resources/js/components/Header.vue");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.vue");
 //
 //
 //
@@ -2061,20 +2115,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Header: _Header__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Footer: _Footer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
-      project: {}
+      project: ''
     };
   },
   computed: {
     projectSkills: function projectSkills() {
-      return this.project.skills.map(function (skill) {
-        return skill.title;
-      });
+      if (this.project.skills) {
+        return this.project.skills.map(function (skill) {
+          return skill.title;
+        });
+      }
     }
   },
-  mounted: function mounted() {
+  created: function created() {
     var project_id = this.$route.params.id;
     var self = this;
     axios.get('/api/projects/' + project_id).then(function (response) {
@@ -2204,7 +2269,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".project__image {\n  max-width: 400px;\n  padding: 0 15px;\n  border: 1px solid white;\n}\n.project__written {\n  padding: 5px;\n}\n.project__written-info {\n  width: 70%;\n}\n.project__written-title {\n  font-size: 25px;\n  text-transform: uppercase;\n  margin-bottom: 15px;\n  font-weight: bold;\n}\n.project {\n  color: black;\n}\n.project__written-skills__items {\n  text-transform: uppercase;\n}\n.project__image-footer {\n  margin-top: 10px;\n  font-size: 22px;\n}", ""]);
+exports.push([module.i, ".project {\n  margin-bottom: 35px;\n}\n.project__image {\n  max-width: 400px;\n  padding: 0 15px;\n  border: 1px solid white;\n}\n.project__written {\n  padding: 5px;\n}\n.project__written-info {\n  width: 70%;\n}\n.project__written-title {\n  font-size: 25px;\n  text-transform: uppercase;\n  margin-bottom: 15px;\n  font-weight: bold;\n}\n.project {\n  color: black;\n}\n.project__written-skills__items {\n  text-transform: uppercase;\n  margin: 0 4px;\n}\n.project__image-footer {\n  margin-top: 10px;\n  font-size: 17px;\n}\n.project__visual {\n  text-align: right;\n}\n.project__written-info {\n  margin: 8px 0;\n}\n@media screen and (max-width: 768px) {\n.project__visual {\n    text-align: center;\n}\n.project__written {\n    text-align: center;\n    margin: 0 auto;\n}\n.project__written-info {\n    margin: 0 auto;\n}\n}", ""]);
 
 // exports
 
@@ -2223,7 +2288,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".page-headline {\n  color: #ffffff;\n  font-size: 25px;\n  font-weight: bold;\n  text-align: center;\n  padding: 15px;\n  /*border-bottom: 1px solid #ffffff;*/\n}\n.page-headline:after {\n  content: \"\";\n  /* This is necessary for the pseudo element to work. */\n  display: block;\n  /* This will put the pseudo element on its own line. */\n  margin: 0 auto;\n  /* This will center the border. */\n  width: 50%;\n  /* Change this to whatever width you want. */\n  padding-top: 20px;\n  /* This creates some space between the element and the border. */\n  border-bottom: 1px solid #ffffff;\n  /* This creates the border. Replace black with whatever color you want. */\n}\n.skills {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap-reverse;\n  text-align: center;\n  justify-content: center;\n}\n.skills__item {\n  color: #000;\n  text-align: center;\n  width: 120px;\n  height: 45px;\n  line-height: 45px;\n  text-transform: uppercase;\n  /*background-color: green;*/\n  margin: 10px;\n}\n.projects {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  text-align: center;\n  justify-content: center;\n}", ""]);
+exports.push([module.i, ".page-headline {\n  color: #000;\n  font-size: 25px;\n  font-weight: bold;\n  text-align: center;\n  padding: 15px;\n  /*border-bottom: 1px solid #ffffff;*/\n}\n.page-headline:after {\n  content: \"\";\n  /* This is necessary for the pseudo element to work. */\n  display: block;\n  /* This will put the pseudo element on its own line. */\n  margin: 0 auto;\n  /* This will center the border. */\n  width: 50%;\n  /* Change this to whatever width you want. */\n  padding-top: 20px;\n  /* This creates some space between the element and the border. */\n  border-bottom: 1px solid #000;\n  /* This creates the border. Replace black with whatever color you want. */\n}\n.skills {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap-reverse;\n  text-align: center;\n  justify-content: center;\n}\n.skills__item {\n  color: #000;\n  text-align: center;\n  width: 120px;\n  height: 45px;\n  line-height: 45px;\n  text-transform: uppercase;\n  /*background-color: green;*/\n  margin: 10px;\n}\n.projects {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  text-align: center;\n  justify-content: center;\n}", ""]);
 
 // exports
 
@@ -2242,7 +2307,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".projects__item {\n  color: #000;\n  text-align: center;\n  /*background-color: green;*/\n  margin: 10px;\n}\n.projects__item-image {\n  max-width: 400px;\n  padding: 8px;\n  /*border: 1px solid #000;*/\n}\n.project-skills__item {\n  text-transform: uppercase;\n  font-size: 11px;\n}", ""]);
+exports.push([module.i, ".projects__item {\n  color: #000;\n  text-align: center;\n  /*background-color: green;*/\n  margin: 10px;\n}\n.projects__item-image {\n  max-width: 400px;\n  padding: 8px;\n  /*border: 1px solid #000;*/\n}\n.project-skills__item {\n  text-transform: uppercase;\n  font-size: 11px;\n  margin: 0 5px;\n}", ""]);
 
 // exports
 
@@ -2280,7 +2345,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.columns {\n}\n.hero__intro.column.has-text-black {\n    text-align: right;\n    padding-right: 45px;\n    text-transform: uppercase;\n}\n.hero__intro--hello {\n    font-size: 24px;\n    border-bottom: 1px solid #202020;\n}\n.hero__intro--who {\n    font-size: 38px;\n    letter-spacing: 4px;\n}\n.hero__intro--fname {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 4px;\n}\n.hero__intro--nlame {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 4px;\n}\n.hero__image.column {\n    min-height: 422px;\n    overflow: hidden;\n    position: relative;\n}\n.hero__img {\n    max-width: 300px;\n    position: absolute;\n    top: 1%;\n    z-index: 9999;\n}\n", ""]);
+exports.push([module.i, "\n.navbar-brand a {\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 
@@ -2299,7 +2364,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container {\n}\n.site-section.about.has-text-centered {\n}\n.site-section__title {\n}\n.about__info {\n    margin-bottom: 25px;\n}\n.columns2 {\n    text-transform: uppercase;\n    margin: 10px;\n}\n.button.is-medium.is-light {\n    margin-right: 25px;\n}\n.button.is-medium.is-dark {\n}\n.columns {\n}\n.column.row-section {\n}\n.row-section__title {\n}\n.row-section__content {\n}\n.job {\n}\n.job__date {\n    font-size: 13px;\n    margin-bottom: 3px;\n}\n.job__title {\n    color: rgb(50, 115, 220);\n    /* text-transform: uppercase; */\n    font-size: 15px;\n}\n.job__place {\n    opacity: 0.7;\n    font-size: 14px;\n}\n.progress.is-small.is-primary {\n}\n.progress.is-small.is-link {\n}\n.progress.is-small.is-success {\n}\n.featured_tech {\n    background-color: #eee;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n}\n.site-section.about.has-text-centered {\n}\n.site-section__title {\n}\n.about__info {\n    margin-bottom: 25px;\n}\n.columns2 {\n    text-transform: uppercase;\n    margin: 10px;\n}\n.button.is-medium.is-light {\n    margin-right: 25px;\n}\n.button.is-medium.is-dark {\n}\n.columns {\n}\n.column.row-section {\n}\n.row-section__title {\n}\n.row-section__content {\n    max-width: 75%;\n    text-align:justify;\n    margin-top:6%;\n}\n.job {\n}\n.job__date {\n    font-size: 13px;\n    margin-bottom: 3px;\n}\n.job__title {\n    color: rgb(50, 115, 220);\n    /* text-transform: uppercase; */\n    font-size: 15px;\n}\n.job__place {\n    opacity: 0.7;\n    font-size: 14px;\n}\n.progress.is-small.is-primary {\n}\n.progress.is-small.is-link {\n}\n.progress.is-small.is-success {\n}\n.featured_tech {\n    background-color: #eee;\n}\n.columns {\n}\n.hero__intro.column.has-text-black {\n    text-align: right;\n    padding-right: 45px;\n    text-transform: uppercase;\n}\n.hero__intro--hello {\n    font-size: 24px;\n    border-bottom: 1px solid #202020;\n}\n.hero__intro--who {\n    font-size: 38px;\n    letter-spacing: 4px;\n}\n.hero__intro--fname {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 4px;\n}\n.hero__intro--nlame {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 4px;\n}\n.hero__image.column {\n    min-height: 422px;\n    overflow: hidden;\n    position: relative;\n}\n.hero__img {\n    max-width: 300px;\n    position: absolute;\n    top: 1%;\n    z-index: 9999;\n}\n@media screen and (max-width: 768px) {\n.column.row-section {\n        text-align: center;\n}\n.hero__img {\n        text-align: center;\n}\n.hero__image.column {\n        text-align: center;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -20783,7 +20848,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("footer", [
+      _c("footer", { attrs: { id: "contactme" } }, [
         _c("h2", { staticClass: "hidden" }, [_vm._v(" Footer")]),
         _vm._v(" "),
         _c(
@@ -20828,47 +20893,84 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("header", { staticClass: "container-fluid" }, [
+      _c("h2", { staticClass: "hidden" }, [
+        _vm._v("\n            Main Menu\n        ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "nav",
+        {
+          staticClass: "navbar is-dark",
+          staticStyle: { "margin-bottom": "30px" },
+          attrs: { role: "navigation", "aria-label": "main navigation" }
+        },
+        [
+          _c("h2", { staticClass: "hidden" }, [_vm._v("Main Navigation")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "navbar-brand" }, [
+            _c("a", { staticClass: "navbar-item", attrs: { href: "#" } }, [
+              _vm._v("LakhveerBawa.Com\n                ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "navbar-burger burger",
+                class: { "is-active": _vm.MenuStatus },
+                attrs: {
+                  role: "button",
+                  "aria-label": "menu",
+                  "aria-expanded": "false",
+                  "data-target": "navbarBasicExample"
+                },
+                on: { click: _vm.toggleMenu }
+              },
+              [
+                _c("span", { attrs: { "aria-hidden": "true" } }),
+                _vm._v(" "),
+                _c("span", { attrs: { "aria-hidden": "true" } }),
+                _vm._v(" "),
+                _c("span", { attrs: { "aria-hidden": "true" } })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "navbar-menu",
+              class: { "is-active": _vm.MenuStatus },
+              attrs: { id: "navbarBasicExample" }
+            },
+            [_vm._m(0)]
+          )
+        ]
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("section", [
-        _c("h2", { staticClass: "hidden" }, [
-          _vm._v("\n            Who am I?\n        ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "columns" }, [
-          _c("div", { staticClass: "hero__intro column has-text-black" }, [
-            _c("span", { staticClass: "hero__intro--hello" }, [
-              _vm._v("\n\n                Hello\n\n            ")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "hero__intro--who" }, [
-              _vm._v("\n                I'M\n            ")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "hero__intro--fname" }, [
-              _vm._v("\n                Lakhveer\n            ")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "hero__intro--nlame" }, [
-              _vm._v("\n                Bawa\n            ")
-            ]),
-            _vm._v(" "),
-            _c("div", [_vm._v("Full Stack Web Developer")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "hero__image column" }, [
-            _c("img", {
-              staticClass: "hero__img",
-              attrs: { src: "/hero.png", alt: "Lakhveer Bawa Image" }
-            })
-          ])
-        ])
+    return _c("div", { staticClass: "navbar-end" }, [
+      _c("a", { staticClass: "navbar-item" }, [
+        _vm._v("\n                        Home\n                    ")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "navbar-item", attrs: { href: "#myprojects" } }, [
+        _vm._v("\n                        Projects\n                    ")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "navbar-item", attrs: { href: "#skills" } }, [
+        _vm._v("\n                        Skills\n                    ")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "navbar-item", attrs: { href: "#contactme" } }, [
+        _vm._v("\n                        Contact Me\n                    ")
       ])
     ])
   }
@@ -20899,14 +21001,19 @@ var render = function() {
     [
       _c("Header"),
       _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       _c("div", { staticClass: "container" }, [
-        _vm._m(0),
-        _vm._v(" "),
         _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
         _vm._v(" "),
         _c(
           "section",
-          { staticClass: "site-section has-text-centered" },
+          {
+            staticClass: "site-section has-text-centered",
+            attrs: { id: "myprojects" }
+          },
           [
             _c("h3", { staticClass: "hidden" }, [_vm._v("My Portfoli")]),
             _vm._v(" "),
@@ -20950,15 +21057,56 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("section", [
+      _c("h2", { staticClass: "hidden" }, [
+        _vm._v("\n                Who am I?\n            ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "columns" }, [
+        _c("div", { staticClass: "hero__intro column has-text-black" }, [
+          _c("span", { staticClass: "hero__intro--hello" }, [
+            _vm._v("\n\n                        Hello\n\n                    ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "hero__intro--who" }, [
+            _vm._v("\n                        I'M\n                    ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "hero__intro--fname" }, [
+            _vm._v("\n                        Lakhveer\n                    ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "hero__intro--nlame" }, [
+            _vm._v("\n                        Bawa\n                    ")
+          ]),
+          _vm._v(" "),
+          _c("div", [_vm._v("Full Stack Web Developer")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "hero__image column" }, [
+          _c("img", {
+            staticClass: "hero__img",
+            attrs: { src: "/hero.png", alt: "Lakhveer Bawa Image" }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "section",
       { staticClass: "site-section about has-text-centered" },
       [
         _c("h2", { staticClass: "hidden" }, [_vm._v("About Me")]),
         _vm._v(" "),
-        _c("div", { staticClass: "site-section__title" }, [
-          _vm._v("- About Me -")
-        ]),
+        _c(
+          "div",
+          { staticClass: "site-section__title", attrs: { id: "aboutme" } },
+          [_vm._v("- About Me -")]
+        ),
         _vm._v(" "),
         _c(
           "div",
@@ -20968,7 +21116,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consectetur dicta distinctio dolore, minus neque officia optio, praesentium quas similique, ullam vero voluptates. Ad ex exercitationem perferendis qui voluptatem.\n                "
+              "\n                    I am passionate web developer. I started learning programming as hobby in 2016, and kept on learning the stuff whenever i had time, Currently I am doing Interactive media specialist program at Fanshawe College, London to turn my hobby into career\n                "
             )
           ]
         ),
@@ -20993,7 +21141,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "columns" }, [
+    return _c("div", { staticClass: "columns main-section" }, [
       _c("section", { staticClass: "column row-section" }, [
         _c("h2", { staticClass: "hidden" }, [_vm._v("Education and Jobs")]),
         _vm._v(" "),
@@ -21006,7 +21154,7 @@ var staticRenderFns = [
             _c("li", { staticClass: "job" }, [
               _c("div", { staticClass: "job__date" }, [
                 _vm._v(
-                  "\n                                    March 2014 - April 2017\n                                "
+                  "\n                                    Sept 2018 - May 2019\n                                "
                 )
               ]),
               _vm._v(" "),
@@ -21026,19 +21174,19 @@ var staticRenderFns = [
             _c("li", { staticClass: "job" }, [
               _c("div", { staticClass: "job__date" }, [
                 _vm._v(
-                  "\n                                    March 2014 - April 2017\n                                "
+                  "\n                                    March 2015 - April 2017\n                                "
                 )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "job__title" }, [
                 _vm._v(
-                  " Interactive Media Specialist\n                                "
+                  " Freelance Web Developer\n                                "
                 )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "job__place" }, [
                 _vm._v(
-                  "\n                                    Fanshawe College, London\n                                "
+                  "\n                                    Hatch2Web Technologies\n                                "
                 )
               ])
             ])
@@ -21055,134 +21203,138 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "row-section__content" }, [
           _vm._v(
-            "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium inventore magnam repellendus! Corporis cumque dolore nulla suscipit voluptate? Exercitationem illo nihil, numquam quae quo rerum ut velit? Modi, ut voluptas.\n                    "
+            "\n                        I develop the websites, I work on various technologies and platforms in order to make a website that is good looking and feature rich.\n                    "
           )
         ])
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "column row-section" }, [
-        _c("h2", { staticClass: "hidden" }, [_vm._v("Skills and Abilities")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row-section__title" }, [
-          _vm._v("Skills & Abilities")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row-section__content" }, [
-          _c("ul", [
-            _c("li", [
-              _vm._v("\n                                PHP / MYSQL"),
-              _c("br"),
+      _c(
+        "section",
+        { staticClass: "column row-section", attrs: { id: "skills" } },
+        [
+          _c("h2", { staticClass: "hidden" }, [_vm._v("Skills and Abilities")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row-section__title" }, [
+            _vm._v("Skills & Abilities")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row-section__content" }, [
+            _c("ul", [
+              _c("li", [
+                _vm._v("\n                                PHP / MYSQL"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-primary",
+                    attrs: { value: "90", max: "100" }
+                  },
+                  [_vm._v("90%")]
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-primary",
-                  attrs: { value: "90", max: "100" }
-                },
-                [_vm._v("90%")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("\n                                Node / MongoDB"),
-              _c("br"),
+              _c("li", [
+                _vm._v("\n                                Node / MongoDB"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-link",
+                    attrs: { value: "70", max: "100" }
+                  },
+                  [_vm._v("70%")]
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-link",
-                  attrs: { value: "70", max: "100" }
-                },
-                [_vm._v("70%")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("\n                                Javascript"),
-              _c("br"),
+              _c("li", [
+                _vm._v("\n                                Javascript"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-success",
+                    attrs: { value: "70", max: "100" }
+                  },
+                  [_vm._v("70%")]
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-success",
-                  attrs: { value: "70", max: "100" }
-                },
-                [_vm._v("70%")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("\n                                HTML / CSS"),
-              _c("br"),
+              _c("li", [
+                _vm._v("\n                                HTML / CSS"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-success",
+                    attrs: { value: "90", max: "100" }
+                  },
+                  [_vm._v("90%")]
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-success",
-                  attrs: { value: "90", max: "100" }
-                },
-                [_vm._v("90%")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("\n                                Laravel"),
-              _c("br"),
+              _c("li", [
+                _vm._v("\n                                Laravel"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-primary",
+                    attrs: { value: "85", max: "100" }
+                  },
+                  [_vm._v("85%")]
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-primary",
-                  attrs: { value: "85", max: "100" }
-                },
-                [_vm._v("85%")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("\n                                Express"),
-              _c("br"),
+              _c("li", [
+                _vm._v("\n                                Express"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-primary",
+                    attrs: { value: "75", max: "100" }
+                  },
+                  [_vm._v("75%")]
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-primary",
-                  attrs: { value: "75", max: "100" }
-                },
-                [_vm._v("75%")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("\n                                Vue JS"),
-              _c("br"),
+              _c("li", [
+                _vm._v("\n                                Vue JS"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-primary",
+                    attrs: { value: "80", max: "100" }
+                  },
+                  [_vm._v("80%")]
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-primary",
-                  attrs: { value: "80", max: "100" }
-                },
-                [_vm._v("80%")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("\n                                Wordpress"),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "progress",
-                {
-                  staticClass: "progress is-small is-primary",
-                  attrs: { value: "65", max: "100" }
-                },
-                [_vm._v("65%")]
-              )
+              _c("li", [
+                _vm._v("\n                                Wordpress"),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "progress",
+                  {
+                    staticClass: "progress is-small is-primary",
+                    attrs: { value: "65", max: "100" }
+                  },
+                  [_vm._v("65%")]
+                )
+              ])
             ])
           ])
-        ])
-      ])
+        ]
+      )
     ])
   }
 ]
@@ -21207,60 +21359,75 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "page-headline" }, [_vm._v("Project Overview")]),
-    _vm._v(" "),
-    _c("section", { staticClass: "project columns has-black-text" }, [
-      _c("h2", { staticClass: "hidden" }, [_vm._v("Project Overview")]),
+  return _c(
+    "div",
+    [
+      _c("Header"),
       _vm._v(" "),
-      _c("div", { staticClass: "project__visual column has-text-right" }, [
-        _c("img", {
-          staticClass: "project__image",
-          attrs: { src: _vm.project.image, alt: "Project Image" }
-        }),
-        _c("br"),
+      _c("div", { staticClass: "page-headline" }, [_vm._v("Project Overview")]),
+      _vm._v(" "),
+      _c("section", { staticClass: "project columns has-black-text" }, [
+        _c("h2", { staticClass: "hidden" }, [_vm._v("Project Overview")]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "project__visual column" }, [
+          _c("img", {
+            staticClass: "project__image",
+            attrs: { src: _vm.project.image, alt: "Project Image" }
+          }),
+          _c("br")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "project__written column" }, [
+          _c("div", { staticClass: "project__written-title has-black-text" }, [
+            _vm._v(
+              "\n                " +
+                _vm._s(_vm.project.title) +
+                "\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "project__written-info" }, [
+            _vm._v(
+              "\n                " + _vm._s(_vm.project.info) + "\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "project__written-skills" },
+            [
+              _c("strong", { staticClass: "has-text-black" }, [
+                _vm._v("Skills")
+              ]),
+              _vm._v(":\n                "),
+              _vm._l(_vm.projectSkills, function(pskill) {
+                return _c(
+                  "span",
+                  {
+                    staticClass:
+                      "project__written-skills__items button is-primary is-small mx-2"
+                  },
+                  [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(pskill) +
+                        "\n                "
+                    )
+                  ]
+                )
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "project__written column" }, [
-        _c("div", { staticClass: "project__written-title has-black-text" }, [
-          _vm._v(
-            "\n                " + _vm._s(_vm.project.title) + "\n            "
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "project__written-info" }, [
-          _vm._v(
-            "\n                " + _vm._s(_vm.project.info) + "\n            "
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "project__written-skills" },
-          [
-            _c("strong", { staticClass: "has-text-black" }, [_vm._v("Skills")]),
-            _vm._v(":\n                "),
-            _vm._l(_vm.projectSkills, function(pskill) {
-              return _c(
-                "span",
-                { staticClass: "project__written-skills__items" },
-                [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(pskill) +
-                      ",\n                "
-                  )
-                ]
-              )
-            })
-          ],
-          2
-        )
-      ])
-    ])
-  ])
+      _c("Footer")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -21356,9 +21523,13 @@ var render = function() {
           "div",
           { staticClass: "projects__item-skills" },
           _vm._l(_vm.projectSkills, function(skill) {
-            return _c("span", { staticClass: "project-skills__item" }, [
-              _vm._v(_vm._s(skill) + ", ")
-            ])
+            return _c(
+              "span",
+              {
+                staticClass: "project-skills__item button is-primary is-small "
+              },
+              [_vm._v(_vm._s(skill))]
+            )
           }),
           0
         ),
@@ -36270,14 +36441,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./resources/js/components/Header.vue ***!
   \********************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Header_vue_vue_type_template_id_1f42fb90___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Header.vue?vue&type=template&id=1f42fb90& */ "./resources/js/components/Header.vue?vue&type=template&id=1f42fb90&");
 /* harmony import */ var _Header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.vue?vue&type=script&lang=js& */ "./resources/js/components/Header.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _Header_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Header.vue?vue&type=style&index=0&lang=css&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _Header_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Header.vue?vue&type=style&index=0&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -36309,7 +36481,7 @@ component.options.__file = "resources/js/components/Header.vue"
 /*!*********************************************************************!*\
   !*** ./resources/js/components/Header.vue?vue&type=script&lang=js& ***!
   \*********************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

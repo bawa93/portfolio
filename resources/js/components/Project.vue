@@ -1,19 +1,14 @@
 <template>
     <div>
+        <Header></Header>
         <div class="page-headline">Project Overview</div>
 
         <section class="project columns has-black-text">
             <h2 class="hidden">Project Overview</h2>
-            <div class="project__visual column has-text-right">
+            <div class="project__visual column">
                 <img :src="project.image" alt="Project Image" class="project__image"><br>
 
-                <div class="project__image-footer">
-                    <span>122</span>
-                    <a href="#">
 
-                        <span style="color: red;">&#10084;</span>
-                    </a>
-                </div>
 
             </div>
             <div class="project__written column">
@@ -25,31 +20,45 @@
                 </div>
                 <div class="project__written-skills">
                     <strong class="has-text-black">Skills</strong>:
-                    <span class="project__written-skills__items" v-for="pskill in projectSkills">
-                        {{ pskill}},
+                    <span class="project__written-skills__items button is-primary is-small mx-2" v-for="pskill in projectSkills">
+                        {{ pskill}}
                     </span>
+                </div>
+                <div class="project__image-footer">
+                    <span>122</span>
+                    <a href="#">
+
+                        <span style="color: red;">&#10084;</span>
+                    </a>
                 </div>
 
 
             </div>
         </section>
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
-export default {
+import Header from './Header';
+import Footer from './Footer';
 
+export default {
+    components: { Header, Footer},
     data() {
         return {
-          project: {}
+          project: '',
         }
     },
     computed: {
       projectSkills() {
-          return this.project.skills.map(skill => skill.title);
+          if (this.project.skills) {
+
+              return this.project.skills.map(skill => skill.title);
+          }
       }
     },
-    mounted() {
+    created() {
         let project_id = this.$route.params.id;
         let self = this;
         axios.get('/api/projects/' + project_id).then(function(response) {
@@ -59,6 +68,9 @@ export default {
 }
 </script>
 <style lang="scss">
+    .project {
+        margin-bottom: 35px;
+    }
 .project__image {
     max-width: 400px;
     padding: 0 15px;
@@ -82,9 +94,30 @@ export default {
     }
     .project__written-skills__items {
         text-transform: uppercase;
+        margin:0 4px;
     }
     .project__image-footer {
         margin-top: 10px;
-        font-size:22px;
+        font-size:17px;
     }
+    .project__visual {
+        text-align: right;
+    }
+
+    .project__written-info {
+        margin:8px 0;
+    }
+    @media screen and (max-width: 768px) {
+
+    .project__visual {
+        text-align: center;
+    }
+    .project__written {
+        text-align: center;
+        margin:0 auto;
+    }
+    .project__written-info {
+        margin: 0 auto;
+    }
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer>
+        <footer id="contactme">
         <h2 class="hidden"> Footer</h2>
 
         <div class="page-footer has-text-centered has-text-white">

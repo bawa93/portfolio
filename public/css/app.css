@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);header {
+@import url(https://fonts.googleapis.com/css?family=Nunito);html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #00D1B2;
+}
+
+header {
   background-color: #e7e7e7;
 }
 
