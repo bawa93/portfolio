@@ -4,7 +4,7 @@
 
         <div class="skills">
             <div v-for="skill in skills" class="skills__item">
-                PHP
+                {{ skill}}
             </div>
         </div>
         <div class="projects">

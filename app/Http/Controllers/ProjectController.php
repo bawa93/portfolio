@@ -16,8 +16,9 @@ class ProjectController extends Controller
         return ProjectResource::collection($projects);
     }
 
-    public function show(Project $project)
+    public function show($id)
     {
+        $project = Project::where('id', $id)->with('skills')->first();
         return new ProjectResource($project);
     }
 
