@@ -2,9 +2,10 @@
     <div>
         <div class="page-headline">Project Overview</div>
 
-        <div class="project columns has-black-text">
+        <section class="project columns has-black-text">
+            <h2 class="hidden">Project Overview</h2>
             <div class="project__visual column has-text-right">
-                <img :src="project.image" class="project__image"><br>
+                <img :src="project.image" alt="Project Image" class="project__image"><br>
 
                 <div class="project__image-footer">
                     <span>122</span>
@@ -25,13 +26,13 @@
                 <div class="project__written-skills">
                     <strong class="has-text-black">Skills</strong>:
                     <span class="project__written-skills__items" v-for="pskill in projectSkills">
-                        {{ pskill}}
+                        {{ pskill}},
                     </span>
                 </div>
 
 
             </div>
-        </div>
+        </section>
     </div>
 </template>
 

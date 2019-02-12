@@ -13,15 +13,21 @@
 <title>Lakhveer Bawa - Full Stack Web Developer</title>
 
 <style>
-
+.hidden {
+    display: none;
+}
 </style>
 </head>
 <body>
+<h1 class="hidden">Lakhveer Bawa - Full Stack Web Developer</h1>
 <div id="app">
 
     <header class="container-fluid">
-
+        <h2 class="hidden">
+            Main Menu
+        </h2>
         <nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="margin-bottom: 30px;">
+            <h2 class="hidden">Main Navigation</h2>
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
                 </a>

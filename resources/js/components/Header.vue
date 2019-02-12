@@ -1,5 +1,11 @@
 <template>
     <div>
+
+        <section>
+            <h2 class="hidden">
+                Who am I?
+            </h2>
+
         <div class="columns">
             <div class="hero__intro column has-text-black" >
                 <span class="hero__intro--hello">
@@ -20,9 +26,10 @@
             </div>
 
             <div class="hero__image column">
-                <img src="/hero.png" class="hero__img" >
+                <img src="/hero.png" alt="Lakhveer Bawa Image" class="hero__img" >
             </div>
         </div>
+        </section>
     </div>
 </template>
 
@@ -49,19 +56,19 @@ export default  {
 
     .hero__intro--who {
         font-size: 38px;
-        letter-spacing: 3.5px;
+        letter-spacing: 4px;
     }
 
     .hero__intro--fname {
         font-size: 38px;
         font-weight: bold;
-        letter-spacing: 3.5px;
+        letter-spacing: 4px;
     }
 
     .hero__intro--nlame {
         font-size: 38px;
         font-weight: bold;
-        letter-spacing: 3.5px;
+        letter-spacing: 4px;
     }
 
     .hero__image.column {

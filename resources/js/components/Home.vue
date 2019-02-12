@@ -4,7 +4,8 @@
         <Header></Header>
         <div class="container">
 
-            <div class="site-section about has-text-centered">
+            <section class="site-section about has-text-centered">
+                <h2 class="hidden">About Me</h2>
                 <div class="site-section__title">- About Me -</div>
                 <div class="about__info" style="
   margin-bottom: 25px;
@@ -14,10 +15,13 @@
                 <div class="columns2">
                     <a href="#" class="button is-medium  is-light" >My Resume</a>
                     <a href="#" class="button is-medium  is-dark">Hire Me</a></div>
-            </div>
+            </section>
 
             <div class="columns">
-                <div class="column row-section">
+
+                <section class="column row-section">
+                    <h2 class="hidden">Education and Jobs</h2>
+
                     <div class="row-section__title">Education & Jobs</div>
                     <div class="row-section__content">
                         <ul>
@@ -44,14 +48,18 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="column row-section">
+                </section>
+                <section class="column row-section">
+                    <h3 class="hidden">What i am doing</h3>
+
                     <div class="row-section__title">What I am doing</div>
                     <div class="row-section__content">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium inventore magnam repellendus! Corporis cumque dolore nulla suscipit voluptate? Exercitationem illo nihil, numquam quae quo rerum ut velit? Modi, ut voluptas.
                     </div>
-                </div>
-                <div class="column row-section">
+                </section>
+                <section class="column row-section">
+                    <h2 class="hidden">Skills and Abilities</h2>
+
                     <div class="row-section__title">Skills & Abilities</div>
                     <div class="row-section__content">
                         <ul>
@@ -89,20 +97,24 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </section>
             </div>
 
-            <div class="site-section has-text-centered">
+            <section class="site-section has-text-centered">
+                <h3 class="hidden">My Portfoli</h3>
+
                 <div class="site-section__title">- My Projects -</div>
                     <Projects></Projects>
-            </div>
+            </section>
         </div>
         <div class="container-fluid">
 
-            <div class="site-section has-text-centered featured_tech">
+            <section class="site-section has-text-centered featured_tech">
+                <h4 class="hidden">Featured Technologies</h4>
+
                 <!--<div class="site-section__title">- Featured Technogies -</div>-->
                 <Featured_Technologies></Featured_Technologies>
-            </div>
+            </section>
             <Footer></Footer>
         </div>
 

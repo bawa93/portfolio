@@ -11,8 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Skill::class, 20)->create();
-        factory(App\Project::class, 50)->create();
+        $this->call(SkillsTableSeeder::class);
+        $this->call(ProjectsTableSeeder::class);
+
+        // factory(App\Project::class, 15)->create();
 
         $skills = \App\Skill::pluck('id');
 
@@ -21,6 +23,8 @@ class DatabaseSeeder extends Seeder
             \Log::info($skills);
             $project_obj = \App\Project::find($project->id);
             $project_obj->skills()->attach($skills[array_rand($skills->toArray())]);
+            $project_obj->skills()->attach($skills[array_rand($skills->toArray())]);
+
         });
     }
 }

@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="projects__item">
-                <img :src="project.image" class="projects__item-image"><br>
+                <img :src="project.image" alt="Project Image" class="projects__item-image"><br>
             <div class="projects__item-skills">
-                <span class="project-skills__item" v-for="skill in projectSkills">{{skill}}</span>
+                <span class="project-skills__item" v-for="skill in projectSkills">{{skill}}, </span>
             </div>
             <router-link :to="{ name: 'project', params: { id: project.id }}">{{ project.title | uppercase }}</router-link>
 

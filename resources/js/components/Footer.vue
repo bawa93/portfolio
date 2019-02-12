@@ -1,5 +1,8 @@
 <template>
     <div>
+        <footer>
+        <h2 class="hidden"> Footer</h2>
+
         <div class="page-footer has-text-centered has-text-white">
             <div class="site-section__title">- Contact -</div>
 
@@ -11,6 +14,7 @@
             </div>
 
         </div>
+        </footer>
     </div>
 </template>
 

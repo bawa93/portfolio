@@ -1807,6 +1807,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -1820,6 +1824,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1865,6 +1876,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Projects */ "./resources/js/components/Projects.vue");
 /* harmony import */ var _Featured_Technologies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Featured_Technologies */ "./resources/js/components/Featured_Technologies.vue");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2037,6 +2060,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2071,6 +2095,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Projects_item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Projects_item */ "./resources/js/components/Projects_item.vue");
+//
 //
 //
 //
@@ -2255,7 +2280,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.columns {\n}\n.hero__intro.column.has-text-black {\n    text-align: right;\n    padding-right: 45px;\n    text-transform: uppercase;\n}\n.hero__intro--hello {\n    font-size: 24px;\n    border-bottom: 1px solid #202020;\n}\n.hero__intro--who {\n    font-size: 38px;\n    letter-spacing: 3.5px;\n}\n.hero__intro--fname {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 3.5px;\n}\n.hero__intro--nlame {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 3.5px;\n}\n.hero__image.column {\n    min-height: 422px;\n    overflow: hidden;\n    position: relative;\n}\n.hero__img {\n    max-width: 300px;\n    position: absolute;\n    top: 1%;\n    z-index: 9999;\n}\n", ""]);
+exports.push([module.i, "\n.columns {\n}\n.hero__intro.column.has-text-black {\n    text-align: right;\n    padding-right: 45px;\n    text-transform: uppercase;\n}\n.hero__intro--hello {\n    font-size: 24px;\n    border-bottom: 1px solid #202020;\n}\n.hero__intro--who {\n    font-size: 38px;\n    letter-spacing: 4px;\n}\n.hero__intro--fname {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 4px;\n}\n.hero__intro--nlame {\n    font-size: 38px;\n    font-weight: bold;\n    letter-spacing: 4px;\n}\n.hero__image.column {\n    min-height: 422px;\n    overflow: hidden;\n    position: relative;\n}\n.hero__img {\n    max-width: 300px;\n    position: absolute;\n    top: 1%;\n    z-index: 9999;\n}\n", ""]);
 
 // exports
 
@@ -20758,23 +20783,27 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c(
-        "div",
-        { staticClass: "page-footer has-text-centered has-text-white" },
-        [
-          _c("div", { staticClass: "site-section__title" }, [
-            _vm._v("- Contact -")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "page-footer__email" }, [
-            _vm._v("\n            bawa93lakhveer@gmail.com\n        ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "page-footer__phone" }, [
-            _vm._v("\n            +1 647 539 2348\n        ")
-          ])
-        ]
-      )
+      _c("footer", [
+        _c("h2", { staticClass: "hidden" }, [_vm._v(" Footer")]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "page-footer has-text-centered has-text-white" },
+          [
+            _c("div", { staticClass: "site-section__title" }, [
+              _vm._v("- Contact -")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "page-footer__email" }, [
+              _vm._v("\n            bawa93lakhveer@gmail.com\n        ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "page-footer__phone" }, [
+              _vm._v("\n            +1 647 539 2348\n        ")
+            ])
+          ]
+        )
+      ])
     ])
   }
 ]
@@ -20807,29 +20836,38 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("div", { staticClass: "columns" }, [
-        _c("div", { staticClass: "hero__intro column has-text-black" }, [
-          _c("span", { staticClass: "hero__intro--hello" }, [
-            _vm._v("\n\n                Hello\n\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "hero__intro--who" }, [
-            _vm._v("\n                I'M\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "hero__intro--fname" }, [
-            _vm._v("\n                Lakhveer\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "hero__intro--nlame" }, [
-            _vm._v("\n                Bawa\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", [_vm._v("Full Stack Web Developer")])
+      _c("section", [
+        _c("h2", { staticClass: "hidden" }, [
+          _vm._v("\n            Who am I?\n        ")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "hero__image column" }, [
-          _c("img", { staticClass: "hero__img", attrs: { src: "/hero.png" } })
+        _c("div", { staticClass: "columns" }, [
+          _c("div", { staticClass: "hero__intro column has-text-black" }, [
+            _c("span", { staticClass: "hero__intro--hello" }, [
+              _vm._v("\n\n                Hello\n\n            ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "hero__intro--who" }, [
+              _vm._v("\n                I'M\n            ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "hero__intro--fname" }, [
+              _vm._v("\n                Lakhveer\n            ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "hero__intro--nlame" }, [
+              _vm._v("\n                Bawa\n            ")
+            ]),
+            _vm._v(" "),
+            _c("div", [_vm._v("Full Stack Web Developer")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "hero__image column" }, [
+            _c("img", {
+              staticClass: "hero__img",
+              attrs: { src: "/hero.png", alt: "Lakhveer Bawa Image" }
+            })
+          ])
         ])
       ])
     ])
@@ -20867,9 +20905,11 @@ var render = function() {
         _vm._m(1),
         _vm._v(" "),
         _c(
-          "div",
+          "section",
           { staticClass: "site-section has-text-centered" },
           [
+            _c("h3", { staticClass: "hidden" }, [_vm._v("My Portfoli")]),
+            _vm._v(" "),
             _c("div", { staticClass: "site-section__title" }, [
               _vm._v("- My Projects -")
             ]),
@@ -20885,9 +20925,15 @@ var render = function() {
         { staticClass: "container-fluid" },
         [
           _c(
-            "div",
+            "section",
             { staticClass: "site-section has-text-centered featured_tech" },
-            [_c("Featured_Technologies")],
+            [
+              _c("h4", { staticClass: "hidden" }, [
+                _vm._v("Featured Technologies")
+              ]),
+              _vm._v(" "),
+              _c("Featured_Technologies")
+            ],
             1
           ),
           _vm._v(" "),
@@ -20904,45 +20950,53 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "site-section about has-text-centered" }, [
-      _c("div", { staticClass: "site-section__title" }, [
-        _vm._v("- About Me -")
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "about__info",
-          staticStyle: { "margin-bottom": "25px" }
-        },
-        [
-          _vm._v(
-            "\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consectetur dicta distinctio dolore, minus neque officia optio, praesentium quas similique, ullam vero voluptates. Ad ex exercitationem perferendis qui voluptatem.\n                "
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "columns2" }, [
-        _c(
-          "a",
-          { staticClass: "button is-medium  is-light", attrs: { href: "#" } },
-          [_vm._v("My Resume")]
-        ),
+    return _c(
+      "section",
+      { staticClass: "site-section about has-text-centered" },
+      [
+        _c("h2", { staticClass: "hidden" }, [_vm._v("About Me")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "site-section__title" }, [
+          _vm._v("- About Me -")
+        ]),
         _vm._v(" "),
         _c(
-          "a",
-          { staticClass: "button is-medium  is-dark", attrs: { href: "#" } },
-          [_vm._v("Hire Me")]
-        )
-      ])
-    ])
+          "div",
+          {
+            staticClass: "about__info",
+            staticStyle: { "margin-bottom": "25px" }
+          },
+          [
+            _vm._v(
+              "\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consectetur dicta distinctio dolore, minus neque officia optio, praesentium quas similique, ullam vero voluptates. Ad ex exercitationem perferendis qui voluptatem.\n                "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "columns2" }, [
+          _c(
+            "a",
+            { staticClass: "button is-medium  is-light", attrs: { href: "#" } },
+            [_vm._v("My Resume")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "button is-medium  is-dark", attrs: { href: "#" } },
+            [_vm._v("Hire Me")]
+          )
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "columns" }, [
-      _c("div", { staticClass: "column row-section" }, [
+      _c("section", { staticClass: "column row-section" }, [
+        _c("h2", { staticClass: "hidden" }, [_vm._v("Education and Jobs")]),
+        _vm._v(" "),
         _c("div", { staticClass: "row-section__title" }, [
           _vm._v("Education & Jobs")
         ]),
@@ -20992,7 +21046,9 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "column row-section" }, [
+      _c("section", { staticClass: "column row-section" }, [
+        _c("h3", { staticClass: "hidden" }, [_vm._v("What i am doing")]),
+        _vm._v(" "),
         _c("div", { staticClass: "row-section__title" }, [
           _vm._v("What I am doing")
         ]),
@@ -21004,7 +21060,9 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "column row-section" }, [
+      _c("section", { staticClass: "column row-section" }, [
+        _c("h2", { staticClass: "hidden" }, [_vm._v("Skills and Abilities")]),
+        _vm._v(" "),
         _c("div", { staticClass: "row-section__title" }, [
           _vm._v("Skills & Abilities")
         ]),
@@ -21152,11 +21210,13 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "page-headline" }, [_vm._v("Project Overview")]),
     _vm._v(" "),
-    _c("div", { staticClass: "project columns has-black-text" }, [
+    _c("section", { staticClass: "project columns has-black-text" }, [
+      _c("h2", { staticClass: "hidden" }, [_vm._v("Project Overview")]),
+      _vm._v(" "),
       _c("div", { staticClass: "project__visual column has-text-right" }, [
         _c("img", {
           staticClass: "project__image",
-          attrs: { src: _vm.project.image }
+          attrs: { src: _vm.project.image, alt: "Project Image" }
         }),
         _c("br"),
         _vm._v(" "),
@@ -21190,7 +21250,7 @@ var render = function() {
                   _vm._v(
                     "\n                    " +
                       _vm._s(pskill) +
-                      "\n                "
+                      ",\n                "
                   )
                 ]
               )
@@ -21288,7 +21348,7 @@ var render = function() {
       [
         _c("img", {
           staticClass: "projects__item-image",
-          attrs: { src: _vm.project.image }
+          attrs: { src: _vm.project.image, alt: "Project Image" }
         }),
         _c("br"),
         _vm._v(" "),
@@ -21297,7 +21357,7 @@ var render = function() {
           { staticClass: "projects__item-skills" },
           _vm._l(_vm.projectSkills, function(skill) {
             return _c("span", { staticClass: "project-skills__item" }, [
-              _vm._v(_vm._s(skill))
+              _vm._v(_vm._s(skill) + ", ")
             ])
           }),
           0

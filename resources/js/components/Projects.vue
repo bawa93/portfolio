@@ -1,6 +1,7 @@
 <template>
     <div>
 
+
         <div class="skills">
             <div v-for="skill in skills" class="skills__item">
                 <a href="#"> {{ skill}}</a>
